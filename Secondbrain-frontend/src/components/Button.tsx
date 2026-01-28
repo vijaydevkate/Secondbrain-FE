@@ -7,6 +7,12 @@ interface Buttonprops{
     startIcon? : ReactElement
 }
 
+//Global styles
+const variantsprops = {
+    primary: "bg-purple-600 text-white",
+    secondary:"bg-purple-200 text-purple-400"
+}
+
 export function Button({variant, text, startIcon}:Buttonprops) {
     return (
         <button></button>
