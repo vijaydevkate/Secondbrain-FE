@@ -2,7 +2,7 @@ import type { ReactElement } from "react"
 
 //props for the button
 interface Buttonprops{
-    variant: "Primary" | "Secondary",
+    variant: "primary" | "secondary",
     text: String,
     startIcon? : ReactElement
 }
@@ -15,6 +15,6 @@ const variantsprops = {
 
 export function Button({variant, text, startIcon}:Buttonprops) {
     return (
-        <button></button>
+        <button className={variantsprops[variant]}></button>
     )
 }
