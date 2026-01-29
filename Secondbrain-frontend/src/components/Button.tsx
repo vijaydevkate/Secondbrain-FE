@@ -15,6 +15,9 @@ const variantsprops = {
 
 export function Button({variant, text, startIcon}:Buttonprops) {
     return (
-        <button className={variantsprops[variant]}>{text}</button>
+        <button className={variantsprops[variant]}>
+            {startIcon}
+            {text}
+        </button>
     )
 }
