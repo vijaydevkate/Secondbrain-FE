@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-    <Button variant="primary" text="Share" startIcon={<ShareIcon/>}></Button> 
-    <Button variant= "secondary" text="Add" startIcon={<PlusIcon/>}></Button>
+    <Button variant="primary" text="Share Brain" startIcon={<ShareIcon/>}></Button> 
+    <Button variant= "secondary" text="Add content" startIcon={<PlusIcon/>}></Button>
     </>
   )
 }
