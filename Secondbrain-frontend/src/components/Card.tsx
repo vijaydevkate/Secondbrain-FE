@@ -10,7 +10,7 @@ export function Card (){
                         <ShareIcon/>
                     </div>
                     Project Ideas
-                </div>
+                </div>. 
 
                 <div className='flex gap-1'>
                     <ShareIcon/>
@@ -19,7 +19,14 @@ export function Card (){
                 </div>
             </div>
             <div className='pt-2'>
-                 <iframe className='w-full' src="https://www.youtube.com/embed/9Np9rP666x8?si=j20Gx63lNapnaViy" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                {/* Youtube embeded link*/}
+                 <iframe className='w-full rounded-lg' src="https://www.youtube.com/embed/9Np9rP666x8?si=j20Gx63lNapnaViy" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+                {/* Twitter embeded link*/}
+                <blockquote className="twitter-tweet">
+                <a href="https://twitter.com/username/status/807811447862468608"></a> 
+                </blockquote>
+
 
             </div>
 
