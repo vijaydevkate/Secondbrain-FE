@@ -18,6 +18,11 @@ export function Card (){
 
                 </div>
             </div>
+            <div className='pt-2'>
+                 <iframe className='w-full' src="https://www.youtube.com/embed/9Np9rP666x8?si=j20Gx63lNapnaViy" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+            </div>
+
 
         </div>
 
