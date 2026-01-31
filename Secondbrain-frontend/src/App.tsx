@@ -1,6 +1,7 @@
 import './App.css'
 import { Button } from './components/Button'
 import { Card } from './components/Card'
+import { CreateContentModel } from './components/CreateContentModel'
 import { PlusIcon } from './Icons/PlusIcon'
 import { ShareIcon } from './Icons/ShareIcon'
 
@@ -9,6 +10,8 @@ function App() {
 
   return (
     <>
+    <CreateContentModel open= {true}></CreateContentModel>
+
     <div className='flex p-4 justify-end gap-4'>
       <Button variant="primary" text="Share Brain" startIcon={<ShareIcon/>}>
       </Button> 
