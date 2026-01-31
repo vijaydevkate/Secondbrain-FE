@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import { Button } from './components/Button'
 import { Card } from './components/Card'
@@ -6,11 +7,11 @@ import { PlusIcon } from './Icons/PlusIcon'
 import { ShareIcon } from './Icons/ShareIcon'
 
 function App() {
-
+  const [modelOpen, setModelOpen] = useState(true)
 
   return (
     <>
-    <CreateContentModel open= {true}></CreateContentModel>
+    <CreateContentModel open= {modelOpen} onClose={()=> {setModelOpen(false)}}></CreateContentModel>
 
     <div className='flex p-4 justify-end gap-4'>
       <Button variant="primary" text="Share Brain" startIcon={<ShareIcon/>}>

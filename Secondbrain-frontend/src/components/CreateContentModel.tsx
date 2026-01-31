@@ -8,8 +8,10 @@ export function CreateContentModel({open, onClose}) {
 
         {open && <div className="h-screen w-screen bg-slate-200 fixed opacity-70 top-0 left-0 z-10 flex justify-center items-center">
             <div className=" bg-white p-4 rounded-md shadow-md z-20">
-                <div className="flex justify-end cursor-pointer">
-                    <CrossIcon/>
+                <div className="flex justify-end cursor-pointer" >
+                    <div onClick={onClose}>
+                      <CrossIcon/>
+                    </div>
                 </div>
                 <div>
                     <Input placeholder= "Title"></Input>
