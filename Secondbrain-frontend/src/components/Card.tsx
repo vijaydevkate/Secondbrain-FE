@@ -1,6 +1,12 @@
 import { ShareIcon } from '../Icons/ShareIcon'
 
-export function Card (){
+interface cardprops{
+    title: string
+    link: string,
+    type: "twitter" | "youtube"
+}
+
+export function Card ({title, link, type}: cardprops){
     return (
         <div className="max-w-72 p-4 border-gray-300 shadow-md rounded-md">
         
@@ -9,24 +15,25 @@ export function Card (){
                     <div className=''>
                         <ShareIcon/>
                     </div>
-                    Project Ideas
+                    {title}
                 </div>. 
 
                 <div className='flex gap-1'>
-                    <ShareIcon/>
+                    <a href= {link} target = "_blank">
+                        <ShareIcon/>
+                    </a>
                     <ShareIcon/>
 
                 </div>
             </div>
             <div className='pt-2'>
                 {/* Youtube embeded link*/}
-                 <iframe className='w-full rounded-lg' src="https://www.youtube.com/embed/9Np9rP666x8?si=j20Gx63lNapnaViy" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                { type === "youtube" &&  <iframe className='w-full rounded-lg' src="https://www.youtube.com/embed/9Np9rP666x8?si=j20Gx63lNapnaViy" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>}
 
                 {/* Twitter embeded link*/}
-                <blockquote className="twitter-tweet">
+                {type === "twitter" && <blockquote className="twitter-tweet">
                 <a href="https://twitter.com/username/status/807811447862468608"></a> 
-                </blockquote>
-
+                </blockquote>}
 
             </div>
 
