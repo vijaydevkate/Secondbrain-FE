@@ -6,6 +6,7 @@ import { CreateContentModel } from './components/CreateContentModel'
 import { PlusIcon } from './Icons/PlusIcon'
 import { ShareIcon } from './Icons/ShareIcon'
 import { Sidebar } from './components/Sidebar'
+import { Sidebaritem } from './components/Sidebaritem'
 
 function App() {
   const [modelOpen, setModelOpen] = useState(true)
@@ -14,6 +15,7 @@ function App() {
     <>
     <div>
       <Sidebar/>
+      <Sidebaritem/>
     </div>
     <div className='p-4 ml-72 bg-gray-100 min-h-screen'>
         <CreateContentModel open= {modelOpen} onClose={()=> {setModelOpen(false)}}></CreateContentModel>
