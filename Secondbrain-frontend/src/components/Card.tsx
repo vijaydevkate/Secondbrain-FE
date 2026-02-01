@@ -8,7 +8,7 @@ interface cardprops{
 
 export function Card ({title, link, type}: cardprops){
     return (
-        <div className="max-w-72 p-4 border-gray-300 shadow-md rounded-md">
+        <div className="max-w-72 p-4 bg-white border-gray-300 shadow-md rounded-md">
         
             <div className="flex items-center justify-between">
                 <div className='flex items-center gap-1 text-sm'>
@@ -16,7 +16,7 @@ export function Card ({title, link, type}: cardprops){
                         <ShareIcon/>
                     </div>
                     {title}
-                </div>. 
+                </div> 
 
                 <div className='flex gap-1'>
                     <a href= {link} target = "_blank">

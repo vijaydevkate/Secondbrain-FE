@@ -5,6 +5,7 @@ interface Buttonprops{
     variant: "primary" | "secondary",
     text: String,
     startIcon? : ReactElement
+    onClick?: ()=> void,
 }
 
 //Global styles
@@ -15,9 +16,9 @@ const variantsprops = {
 
 const buttondefaultstyles = "px-4 py-2 rounded-md flex items-center cursor-pointer"
 
-export function Button({variant, text, startIcon}:Buttonprops) {
+export function Button({variant, text, startIcon, onClick}:Buttonprops) {
     return (
-        <button className={`${variantsprops[variant]} ${buttondefaultstyles}`}>
+        <button onClick={onClick} className={`${variantsprops[variant]} ${buttondefaultstyles}`}>
            <div className="pr-1">
             {startIcon}
            </div>
