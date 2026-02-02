@@ -9,7 +9,7 @@ export function Signup(){
                 <Input placeholder="Username" />
                 <Input placeholder="Password" />    
 
-                <div className="flex justify-center p-2 ">
+                <div className="flex justify-center mt-2 ">
                     <Button variant="primary" text="Signup"/>               
                 </div>
             </div>
