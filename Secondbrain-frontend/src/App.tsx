@@ -15,7 +15,7 @@ function App() {
     <>
     <div>
       <Sidebar/>
-      <Sidebaritem/>
+      
     </div>
     <div className='p-4 ml-72 bg-gray-100 min-h-screen'>
         <CreateContentModel open= {modelOpen} onClose={()=> {setModelOpen(false)}}></CreateContentModel>
