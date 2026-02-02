@@ -9,7 +9,7 @@ import { Sidebar } from './components/Sidebar'
 import { Sidebaritem } from './components/Sidebaritem'
 
 function App() {
-  const [modelOpen, setModelOpen] = useState(true)
+  const [modelOpen, setModelOpen] = useState(false)
 
   return (
     <>

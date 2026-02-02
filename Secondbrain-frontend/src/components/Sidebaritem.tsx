@@ -5,7 +5,7 @@ interface sidebaritemprops{
 }
 export function Sidebaritem({text, starticon}:sidebaritemprops){
     return(
-        <div className="flex">
+        <div className="flex ">
             {starticon}
             {text}
         </div>
