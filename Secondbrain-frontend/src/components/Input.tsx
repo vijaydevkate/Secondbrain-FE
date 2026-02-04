@@ -1,12 +1,13 @@
 interface Inputprops{
-    placeholder: string
+    placeholder: string,
+    ref?: any
    
 }
 
-export function Input({placeholder, }:Inputprops){
+export function Input({placeholder, ref}:Inputprops){
     return (
         <div>
-            <input type="text" placeholder={placeholder} className="border rounded-md p-1 m-2"/>
+            <input type="text" placeholder={placeholder} ref={ref} className="border rounded-md p-1 m-2"/>
         </div>
 
     )
