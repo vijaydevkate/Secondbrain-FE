@@ -10,8 +10,6 @@ export function Signup(){
 
     async function signup(){
         //Reading inputvalue input
-          console.log("signup() called")
-
         const username = usernameref.current?.value
         const password = passwordref.current?.value
       await axios.post(BACKEND_URL + "/api/v1/signup",{
