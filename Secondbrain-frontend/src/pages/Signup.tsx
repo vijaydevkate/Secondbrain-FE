@@ -3,10 +3,12 @@ import { Button } from "../components/Button"
 import { useRef } from "react"
 import { BACKEND_URL } from "../Config"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"  
 
 export function Signup(){
     const usernameref = useRef<HTMLInputElement>(null)
     const passwordref = useRef<HTMLInputElement>(null)
+    const navigate = useNavigate()
 
     async function signup(){
         //Reading inputvalue input
@@ -18,6 +20,7 @@ export function Signup(){
             
         })
         alert("You have signedup")
+        navigate("/signin")
     }
      return(
         <>
