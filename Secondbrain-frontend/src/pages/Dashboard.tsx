@@ -20,9 +20,9 @@ export function Dashboard() {
         <CreateContentModel open= {modelOpen} onClose={()=> {setModelOpen(false)}}></CreateContentModel>
 
         <div className='flex p-4 justify-end gap-4'>
-          <Button onClick={()=>{setModelOpen(true)}} variant="primary" text="Share Brain" startIcon={<ShareIcon/>}>
+          <Button  variant="primary" text="Share Brain" startIcon={<ShareIcon/>}>
           </Button> 
-          <Button variant= "secondary" text="Add content" startIcon={<PlusIcon/>}></Button>
+          <Button onClick={()=>{setModelOpen(true)}} variant= "secondary" text="Add content" startIcon={<PlusIcon/>}></Button>
         </div>
 
         <div className='flex gap-4 p-4 flex-wrap'>
