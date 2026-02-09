@@ -6,9 +6,11 @@ import { CreateContentModel } from '../components/CreateContentModel'
 import { PlusIcon } from '../Icons/PlusIcon'
 import { ShareIcon } from '../Icons/ShareIcon'
 import { Sidebar } from '../components/Sidebar'
+import { usecontent } from '../hooks/Usecontent'
 
 export function Dashboard() {
   const [modelOpen, setModelOpen] = useState(false)
+  const content = usecontent();
 
   return (
     <>
@@ -26,8 +28,9 @@ export function Dashboard() {
         </div>
 
         <div className='flex gap-4 p-4 flex-wrap'>
-          <Card type= "youtube" link="https://www.youtube.com/watch?v=WovgAKWSYY4" title= "youtube link"/>
-          <Card type= "youtube" link="https://www.youtube.com/watch?v=oGKIhfenTRk" title= "youtube link"/>
+          {content.map(({type, title, link})=>{
+            return <Card type={type} title={title} link={link}></Card>
+          })}
         </div>
     </div>
     </>
