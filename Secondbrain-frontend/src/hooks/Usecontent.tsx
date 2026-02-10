@@ -2,21 +2,21 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { BACKEND_URL } from "../Config";
 
-export function usecontent() {
-  const [content, setContent] = useState<any[]>([]);
+export function Usecontent() {
+  const [content, setContent] = useState([]);
 
   useEffect(() => {
-    async function fetchContent() {
-      const res = await axios.get(`${BACKEND_URL}/api/v1/content`, {
+   
+      axios.get(`${BACKEND_URL}/api/v1/content`, {
         headers: {
-          Authorization: localStorage.getItem("token"),
+          "Authorization": localStorage.getItem("token"),
         },
-      });
+      })
+      .then((response) => {
 
-      setContent(res.data.content);
-    }
-
-    fetchContent();
+      setContent(response.data.content);
+      })
+    
   }, []);
 
   return content;

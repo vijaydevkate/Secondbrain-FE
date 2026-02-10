@@ -6,11 +6,11 @@ import { CreateContentModel } from '../components/CreateContentModel'
 import { PlusIcon } from '../Icons/PlusIcon'
 import { ShareIcon } from '../Icons/ShareIcon'
 import { Sidebar } from '../components/Sidebar'
-import { usecontent } from '../hooks/Usecontent'
+import { Usecontent } from '../hooks/Usecontent'
 
 export function Dashboard() {
   const [modelOpen, setModelOpen] = useState(false)
-  const content = usecontent();
+  const content = Usecontent();
 
   return (
     <>
@@ -28,6 +28,7 @@ export function Dashboard() {
         </div>
 
         <div className='flex gap-4 p-4 flex-wrap'>
+          {JSON.stringify(content)}
           {content.map(({type, title, link})=>{
             return <Card type={type} title={title} link={link}></Card>
           })}
